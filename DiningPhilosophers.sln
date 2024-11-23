@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DiningPhilosophers", "DiningPhilosophers\DiningPhilosophers.vcxproj", "{BB00CD2D-A4F0-4759-AA35-5A732C4AF199}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB00CD2D-A4F0-4759-AA35-5A732C4AF199}.Debug|x64.ActiveCfg = Debug|x64
+		{BB00CD2D-A4F0-4759-AA35-5A732C4AF199}.Debug|x64.Build.0 = Debug|x64
+		{BB00CD2D-A4F0-4759-AA35-5A732C4AF199}.Debug|x86.ActiveCfg = Debug|Win32
+		{BB00CD2D-A4F0-4759-AA35-5A732C4AF199}.Debug|x86.Build.0 = Debug|Win32
+		{BB00CD2D-A4F0-4759-AA35-5A732C4AF199}.Release|x64.ActiveCfg = Release|x64
+		{BB00CD2D-A4F0-4759-AA35-5A732C4AF199}.Release|x64.Build.0 = Release|x64
+		{BB00CD2D-A4F0-4759-AA35-5A732C4AF199}.Release|x86.ActiveCfg = Release|Win32
+		{BB00CD2D-A4F0-4759-AA35-5A732C4AF199}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92B5EFEA-A3B1-4602-B611-7D4AE1068143}
+	EndGlobalSection
+EndGlobal
