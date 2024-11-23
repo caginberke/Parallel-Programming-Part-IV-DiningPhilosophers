@@ -1,6 +1,6 @@
 #include "icb_gui.h"
 #include <math.h>
-#define SP_NUMBER 5
+#define SP_NUMBER 9
 #define TABLE_CENTER_X 362         
 #define TABLE_CENTER_Y 250         
 #define TABLE_RADIUS 150           
@@ -11,20 +11,16 @@
 
 int FRM;
 ICBYTES screen;
+int starterHandle;
 
-enum PhilosopherState {
-    Thinking,
-    Hungry,
-    Eating
-};
+enum PhilosopherState {Thinking, Hungry, Eating};
 
-enum StickState {
-    Available,
-    InUse
-};
+enum StickState {Available, InUse};
 
 void EatingAnimation() {
+    //TODO - P
 }
+
 
 void DrawTable(int philosopherStates[SP_NUMBER], int stickStates[SP_NUMBER]) {
     FillCircle(screen, TABLE_CENTER_X, TABLE_CENTER_Y, TABLE_RADIUS, 0xff4e3b);
@@ -126,15 +122,21 @@ void Start(void* simFunction) {
 }
 
 void Deadlock() {
-    int philosopherStates[SP_NUMBER] = { Eating, Available, Hungry, Eating, Thinking };
-    int stickStates[SP_NUMBER] = { InUse, Available, InUse, Available, InUse };
-    DrawTable(philosopherStates, stickStates);
+    starterHandle = false;
+    while (!starterHandle){
+        int philosopherStates[SP_NUMBER] = { Eating, Available, Hungry};
+        int stickStates[SP_NUMBER] = { InUse, Available, InUse};
+        DrawTable(philosopherStates, stickStates);
+    }
 }
 
 void Semaphore() {
-    int philosopherStates[SP_NUMBER] = { Thinking, Hungry, Eating, Thinking, Eating };
-    int stickStates[SP_NUMBER] = { Available, Available, InUse, Available, Available };
-    DrawTable(philosopherStates, stickStates);
+    starterHandle = true;
+    while (starterHandle) {
+        int philosopherStates[SP_NUMBER] = { Thinking, Hungry, Eating};
+        int stickStates[SP_NUMBER] = { Available, InUse, Available};
+        DrawTable(philosopherStates, stickStates);
+    }  
 }
 
 void ICGUI_main() {
