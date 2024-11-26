@@ -16,11 +16,8 @@
 
 int FRM;
 ICBYTES screen;
-Table table;
 
 enum State { Thinking, Hungry, Eating };
-
-
 
 int GetRandomTime()
 {
@@ -275,6 +272,7 @@ public:
     }
 };
 
+Table table;
 
 
 void ICGUI_Create()
